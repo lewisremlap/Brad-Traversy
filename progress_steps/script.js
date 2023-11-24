@@ -39,13 +39,12 @@ function update() {
     const actives = document.querySelectorAll('.active')
     // console.log(actives.length)
     progress.style.width = (actives.length - 1) / (circles.length - 1) * 100 + '%'
-    progress.style.height = 8 + "px"
-    if(currentActive === 1) {
-        prev.disabled = true
-    } else if(currentActive === circles.length) {
-        next.disabled = true
-    } else {
-        prev.disabled = false
-        next.disabled = false
-    }
+    // progress.style.height = 8 + "px"
+    if(currentActive === 1) 
+        {  prev.disabled = true } 
+    else if(currentActive === 4) //if(currentActive === circles.length)
+        {  next.disabled = true } 
+    else if(currentActive === 2 || currentActive === 3) //else
+        {  prev.disabled = false
+           next.disabled = false }
 }
